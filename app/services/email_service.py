@@ -49,7 +49,7 @@ def send_invoice_email(to: str, order: dict, pdf_bytes: bytes | None = None) -> 
     oid = str(order.get("_id", order.get("id", "")))
     short_id = oid[-8:].upper()
     html = render_email(order)
-    subject = f"Your MyGarden invoice · #{short_id}"
+    subject = f"Your Jharna Aquarium & Nursery invoice · #{short_id}"
 
     if pdf_bytes and settings.RESEND_API_KEY:
         import base64
@@ -112,7 +112,7 @@ def _otp_html(code: str, ttl_minutes: int) -> str:
             </p>
           </td></tr>
         </table>
-        <p style="margin:16px 0 0;color:#b5b5ba;font-size:11px;">MyGarden · this is an automated message</p>
+        <p style="margin:16px 0 0;color:#b5b5ba;font-size:11px;">Jharna Aquarium & Nursery · this is an automated message</p>
       </td></tr>
     </table>
   </body>

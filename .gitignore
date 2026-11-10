@@ -32,3 +32,6 @@ Thumbs.db
 .pytest_cache/
 htmlcov/
 .coverage
+
+# Firebase service account (never commit)
+firebase-service-account.json

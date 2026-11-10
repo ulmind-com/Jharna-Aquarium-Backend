@@ -22,7 +22,7 @@ SECTION_ID = "section"
 class SectionConfig(BaseModel):
     """Every piece of copy on the home band and the /garden-services page."""
     # Home band
-    title: str = "Garden services by MyGarden"
+    title: str = "Garden services by Jharna Aquarium & Nursery"
     body: str = ""
     image: str = ""
     cta_label: str = "View all Garden Service"
@@ -43,7 +43,7 @@ class SectionConfig(BaseModel):
     services_note: str = ""
 
     # Why-us + lead form
-    why_title: str = "Why Choose MyGarden?"
+    why_title: str = "Why Choose Jharna Aquarium & Nursery?"
     why_points: list[str] = []
     split_image_1: str = ""
     split_image_2: str = ""
@@ -63,7 +63,7 @@ class SectionConfig(BaseModel):
     projects_title: str = "Our Projects"
     steps_title: str = "How it works?"
     testimonials_title: str = "What our customers say"
-    about_title: str = "More About MyGarden Garden Services"
+    about_title: str = "More About Jharna Aquarium & Nursery Garden Services"
     about_body: str = ""
     faq_title: str = "FAQs"
     seo_body: str = ""

@@ -4,7 +4,7 @@ from pydantic_settings import BaseSettings, SettingsConfigDict
 class Settings(BaseSettings):
     model_config = SettingsConfigDict(env_file=".env", extra="ignore")
 
-    APP_NAME: str = "MyGarden"
+    APP_NAME: str = "Jharna Aquarium & Nursery"
     ENV: str = "development"
 
     MONGO_URI: str = "mongodb://localhost:27017"
@@ -47,7 +47,7 @@ class Settings(BaseSettings):
     # these later; leaving RESEND_API_KEY empty just logs the code (dev).
     RESEND_API_KEY: str = ""
     MAIL_ADDRESS: str = "noreply@plantnursery.com"
-    MAIL_FROM_NAME: str = "MyGarden"
+    MAIL_FROM_NAME: str = "Jharna Aquarium & Nursery"
     OTP_TTL_MINUTES: int = 10           # how long a code stays valid
     OTP_RESEND_COOLDOWN_SECONDS: int = 60  # min gap between resends
     OTP_MAX_ATTEMPTS: int = 5           # wrong tries before a code is burned

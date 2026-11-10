@@ -62,7 +62,7 @@ def _restock_email_html(product_title: str, sizes: list, url: str) -> str:
                padding:12px 28px;border-radius:10px;font-size:14px;font-weight:700;">Shop now 🌱</a>
           </td></tr>
         </table>
-        <p style="margin:16px 0 0;color:#b5b5ba;font-size:11px;">MyGarden &middot; this is an automated message</p>
+        <p style="margin:16px 0 0;color:#b5b5ba;font-size:11px;">Jharna Aquarium & Nursery &middot; this is an automated message</p>
       </td></tr>
     </table>
   </body>

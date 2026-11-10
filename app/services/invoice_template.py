@@ -1,4 +1,4 @@
-"""Premium HTML invoice renderer for MyGarden.
+"""Premium HTML invoice renderer for Jharna Aquarium & Nursery.
 
 Two render functions:
   render_pdf(order)   → HTML optimised for xhtml2pdf (uses Rs. for the rupee sign)
@@ -242,9 +242,9 @@ def render_pdf(order: dict) -> str:
   <!-- FOOTER -->
   <table width="100%" cellpadding="0" cellspacing="0">
     <tr><td style="text-align:center;padding:2px 0;">
-      <p style="font-size:11px;color:#800000;font-style:italic;font-weight:bold;margin:0 0 4px;">Thank you for shopping with MyGarden!</p>
+      <p style="font-size:11px;color:#800000;font-style:italic;font-weight:bold;margin:0 0 4px;">Thank you for shopping with Jharna Aquarium & Nursery!</p>
       <p style="font-size:8px;color:#bbb;margin:0 0 1px;">This is a computer generated invoice and does not require a signature.</p>
-      <p style="font-size:8px;color:#bbb;margin:0;">MyGarden &middot; Farm-Fresh Plants &amp; Garden Essentials</p>
+      <p style="font-size:8px;color:#bbb;margin:0;">Jharna Aquarium & Nursery &middot; Farm-Fresh Plants &amp; Garden Essentials</p>
     </td></tr>
   </table>
 
@@ -457,8 +457,8 @@ def render_email(order: dict) -> str:
               <div style="font-size:11px;color:#b5b0a8;margin-top:2px;">and does not require a signature.</div>
             </td>
             <td style="vertical-align:top;text-align:right;">
-              <div style="font-size:11px;color:#8c8680;">MyGarden &middot; Farm-Fresh Plants &amp; Garden</div>
-              <div style="font-size:11px;color:#b5b0a8;margin-top:2px;">MyGarden</div>
+              <div style="font-size:11px;color:#8c8680;">Jharna Aquarium & Nursery &middot; Farm-Fresh Plants &amp; Garden</div>
+              <div style="font-size:11px;color:#b5b0a8;margin-top:2px;">Jharna Aquarium & Nursery</div>
             </td>
           </tr></table>
         </td></tr>
