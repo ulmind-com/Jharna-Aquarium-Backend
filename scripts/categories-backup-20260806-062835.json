@@ -1,0 +1,299 @@
+[
+  {
+    "_id": "6a6edff8c6a1ea7d907ca6b3",
+    "name": "Animal Fibers",
+    "slug": "animal-fibers",
+    "parent_id": null,
+    "image": null,
+    "image_scale": null,
+    "order": 1
+  },
+  {
+    "_id": "6a6edff8c6a1ea7d907ca6b4",
+    "name": "Merino Wool",
+    "slug": "merino-wool",
+    "parent_id": "6a6edff8c6a1ea7d907ca6b3",
+    "image": null,
+    "image_scale": null,
+    "order": 2
+  },
+  {
+    "_id": "6a6edff8c6a1ea7d907ca6b5",
+    "name": "Alpaca",
+    "slug": "alpaca",
+    "parent_id": "6a6edff8c6a1ea7d907ca6b3",
+    "image": null,
+    "image_scale": null,
+    "order": 3
+  },
+  {
+    "_id": "6a6edff8c6a1ea7d907ca6b6",
+    "name": "Cashmere",
+    "slug": "cashmere",
+    "parent_id": "6a6edff8c6a1ea7d907ca6b3",
+    "image": null,
+    "image_scale": null,
+    "order": 4
+  },
+  {
+    "_id": "6a6edff8c6a1ea7d907ca6b7",
+    "name": "Mohair",
+    "slug": "mohair",
+    "parent_id": "6a6edff8c6a1ea7d907ca6b3",
+    "image": null,
+    "image_scale": null,
+    "order": 5
+  },
+  {
+    "_id": "6a6edff8c6a1ea7d907ca6b8",
+    "name": "Angora",
+    "slug": "angora",
+    "parent_id": "6a6edff8c6a1ea7d907ca6b3",
+    "image": null,
+    "image_scale": null,
+    "order": 6
+  },
+  {
+    "_id": "6a6edff9c6a1ea7d907ca6b9",
+    "name": "Silk",
+    "slug": "silk",
+    "parent_id": "6a6edff8c6a1ea7d907ca6b3",
+    "image": null,
+    "image_scale": null,
+    "order": 7
+  },
+  {
+    "_id": "6a6edff9c6a1ea7d907ca6ba",
+    "name": "Shetland Wool",
+    "slug": "shetland-wool",
+    "parent_id": "6a6edff8c6a1ea7d907ca6b3",
+    "image": null,
+    "image_scale": null,
+    "order": 8
+  },
+  {
+    "_id": "6a6edff9c6a1ea7d907ca6bb",
+    "name": "Camel Hair",
+    "slug": "camel-hair",
+    "parent_id": "6a6edff8c6a1ea7d907ca6b3",
+    "image": null,
+    "image_scale": null,
+    "order": 9
+  },
+  {
+    "_id": "6a6edff9c6a1ea7d907ca6bc",
+    "name": "Qiviut",
+    "slug": "qiviut",
+    "parent_id": "6a6edff8c6a1ea7d907ca6b3",
+    "image": null,
+    "image_scale": null,
+    "order": 10
+  },
+  {
+    "_id": "6a6edff9c6a1ea7d907ca6bd",
+    "name": "Plant Fibers",
+    "slug": "plant-fibers",
+    "parent_id": null,
+    "image": null,
+    "image_scale": null,
+    "order": 11
+  },
+  {
+    "_id": "6a6edff9c6a1ea7d907ca6be",
+    "name": "Cotton",
+    "slug": "cotton",
+    "parent_id": "6a6edff9c6a1ea7d907ca6bd",
+    "image": null,
+    "image_scale": null,
+    "order": 12
+  },
+  {
+    "_id": "6a6edff9c6a1ea7d907ca6bf",
+    "name": "Linen",
+    "slug": "linen",
+    "parent_id": "6a6edff9c6a1ea7d907ca6bd",
+    "image": null,
+    "image_scale": null,
+    "order": 13
+  },
+  {
+    "_id": "6a6edff9c6a1ea7d907ca6c0",
+    "name": "Bamboo",
+    "slug": "bamboo",
+    "parent_id": "6a6edff9c6a1ea7d907ca6bd",
+    "image": null,
+    "image_scale": null,
+    "order": 14
+  },
+  {
+    "_id": "6a6edff9c6a1ea7d907ca6c1",
+    "name": "Hemp",
+    "slug": "hemp",
+    "parent_id": "6a6edff9c6a1ea7d907ca6bd",
+    "image": null,
+    "image_scale": null,
+    "order": 15
+  },
+  {
+    "_id": "6a6edff9c6a1ea7d907ca6c2",
+    "name": "Jute",
+    "slug": "jute",
+    "parent_id": "6a6edff9c6a1ea7d907ca6bd",
+    "image": null,
+    "image_scale": null,
+    "order": 16
+  },
+  {
+    "_id": "6a6edff9c6a1ea7d907ca6c3",
+    "name": "Ramie",
+    "slug": "ramie",
+    "parent_id": "6a6edff9c6a1ea7d907ca6bd",
+    "image": null,
+    "image_scale": null,
+    "order": 17
+  },
+  {
+    "_id": "6a6edff9c6a1ea7d907ca6c4",
+    "name": "Synthetic Fibers",
+    "slug": "synthetic-fibers",
+    "parent_id": null,
+    "image": null,
+    "image_scale": null,
+    "order": 18
+  },
+  {
+    "_id": "6a6edff9c6a1ea7d907ca6c5",
+    "name": "Acrylic",
+    "slug": "acrylic",
+    "parent_id": "6a6edff9c6a1ea7d907ca6c4",
+    "image": null,
+    "image_scale": null,
+    "order": 19
+  },
+  {
+    "_id": "6a6edffac6a1ea7d907ca6c6",
+    "name": "Nylon",
+    "slug": "nylon",
+    "parent_id": "6a6edff9c6a1ea7d907ca6c4",
+    "image": null,
+    "image_scale": null,
+    "order": 20
+  },
+  {
+    "_id": "6a6edffac6a1ea7d907ca6c7",
+    "name": "Polyester",
+    "slug": "polyester",
+    "parent_id": "6a6edff9c6a1ea7d907ca6c4",
+    "image": null,
+    "image_scale": null,
+    "order": 21
+  },
+  {
+    "_id": "6a6edffac6a1ea7d907ca6c8",
+    "name": "Microfiber",
+    "slug": "microfiber",
+    "parent_id": "6a6edff9c6a1ea7d907ca6c4",
+    "image": null,
+    "image_scale": null,
+    "order": 22
+  },
+  {
+    "_id": "6a6edffac6a1ea7d907ca6c9",
+    "name": "Metallic Yarn",
+    "slug": "metallic-yarn",
+    "parent_id": "6a6edff9c6a1ea7d907ca6c4",
+    "image": null,
+    "image_scale": null,
+    "order": 23
+  },
+  {
+    "_id": "6a6edffac6a1ea7d907ca6ca",
+    "name": "Blends & Semi-Synthetics",
+    "slug": "blends-semi-synthetics",
+    "parent_id": null,
+    "image": null,
+    "image_scale": null,
+    "order": 24
+  },
+  {
+    "_id": "6a6edffac6a1ea7d907ca6cb",
+    "name": "Rayon",
+    "slug": "rayon",
+    "parent_id": "6a6edffac6a1ea7d907ca6ca",
+    "image": null,
+    "image_scale": null,
+    "order": 25
+  },
+  {
+    "_id": "6a6edffac6a1ea7d907ca6cc",
+    "name": "Sock Yarn Blend",
+    "slug": "sock-yarn-blend",
+    "parent_id": "6a6edffac6a1ea7d907ca6ca",
+    "image": null,
+    "image_scale": null,
+    "order": 26
+  },
+  {
+    "_id": "6a6edffac6a1ea7d907ca6cd",
+    "name": "Wool-Acrylic Blend",
+    "slug": "wool-acrylic-blend",
+    "parent_id": "6a6edffac6a1ea7d907ca6ca",
+    "image": null,
+    "image_scale": null,
+    "order": 27
+  },
+  {
+    "_id": "6a72f39093c229f7637ae85a",
+    "name": "Acrylic Rainbow",
+    "slug": "acrylic-rainbow",
+    "parent_id": "6a6edff9c6a1ea7d907ca6c5",
+    "image": null,
+    "image_scale": null,
+    "order": 0
+  },
+  {
+    "_id": "6a72f39093c229f7637ae85b",
+    "name": "MultiTone Acrylic",
+    "slug": "multitone-acrylic",
+    "parent_id": "6a6edff9c6a1ea7d907ca6c5",
+    "image": null,
+    "image_scale": null,
+    "order": 1
+  },
+  {
+    "_id": "6a72f39093c229f7637ae85c",
+    "name": "CloudCotton",
+    "slug": "cloudcotton",
+    "parent_id": "6a6edff9c6a1ea7d907ca6be",
+    "image": null,
+    "image_scale": null,
+    "order": 2
+  },
+  {
+    "_id": "6a72f39093c229f7637ae85d",
+    "name": "Aroma Cotton",
+    "slug": "aroma-cotton",
+    "parent_id": "6a6edff9c6a1ea7d907ca6be",
+    "image": null,
+    "image_scale": null,
+    "order": 3
+  },
+  {
+    "_id": "6a72f39093c229f7637ae85e",
+    "name": "TwistTone Cotton",
+    "slug": "twisttone-cotton",
+    "parent_id": "6a6edff9c6a1ea7d907ca6be",
+    "image": null,
+    "image_scale": null,
+    "order": 4
+  },
+  {
+    "_id": "6a72f39193c229f7637ae85f",
+    "name": "Exclusive Acrylic",
+    "slug": "exclusive-acrylic",
+    "parent_id": "6a6edff9c6a1ea7d907ca6c5",
+    "image": null,
+    "image_scale": null,
+    "order": 5
+  }
+]

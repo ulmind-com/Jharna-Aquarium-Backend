@@ -1,0 +1,53 @@
+"""The botanical name behind each plant in the catalogue.
+
+Without it a gallery search runs on the shop title, and "ZZ Plant" returns
+photographs of the band. The name is written onto the product as well, so the
+detail page can show it.
+"""
+
+SPECIES: dict[str, str] = {
+    "Money Plant (Pothos)": "Epipremnum aureum", "Money Plant Golden": "Epipremnum aureum",
+    "Money Plant Variegated": "Epipremnum aureum",
+    "Snake Plant": "Dracaena trifasciata", "Snake Plant (Sansevieria)": "Dracaena trifasciata",
+    "Jade Plant": "Crassula ovata", "Jade Mini Plant": "Crassula ovata",
+    "ZZ Plant": "Zamioculcas zamiifolia", "ZZ Plant (Zamioculcas)": "Zamioculcas zamiifolia",
+    "Peace Lily": "Spathiphyllum", "Peace Lily Plant": "Spathiphyllum",
+    "Monstera Deliciosa": "Monstera deliciosa", "Monstera Adansonii Plant": "Monstera adansonii",
+    "Areca Palm": "Dypsis lutescens", "Aglaonema (Chinese Evergreen)": "Aglaonema commutatum",
+    "Spider Plant": "Chlorophytum comosum", "Chlorophytum Spider Plant": "Chlorophytum comosum",
+    "Lucky Bamboo": "Dracaena sanderiana", "Lucky Bamboo 2 Layer": "Dracaena sanderiana",
+    "Fittonia (Nerve Plant)": "Fittonia albivenis",
+    "Fittonia Green Plant (Nerve Plant)": "Fittonia albivenis",
+    "Calathea": "Calathea", "Syngonium (Arrowhead Plant)": "Syngonium podophyllum",
+    "Syngonium Pink Plant": "Syngonium podophyllum", "Boston Fern": "Nephrolepis exaltata",
+    "Aloe Vera": "Aloe vera", "Aloe Vera Plant": "Aloe vera",
+    "Rubber Plant": "Ficus elastica", "Fiddle Leaf Fig": "Ficus lyrata",
+    "Cast Iron Plant": "Aspidistra elatior", "Philodendron": "Philodendron hederaceum",
+    "Anthurium": "Anthurium andraeanum", "Anthurium Red Plant": "Anthurium andraeanum",
+    "Hibiscus": "Hibiscus rosa-sinensis", "Rose": "Rosa", "Jasmine": "Jasminum sambac",
+    "Jasmine Mogra Plant": "Jasminum sambac", "Bougainvillea": "Bougainvillea glabra",
+    "Periwinkle (Vinca)": "Catharanthus roseus", "Croton": "Codiaeum variegatum",
+    "Croton Petra": "Codiaeum variegatum", "Plumeria (Frangipani)": "Plumeria rubra",
+    "Oleander": "Nerium oleander", "Gardenia": "Gardenia jasminoides",
+    "Marigold": "Tagetes erecta", "Adenium (Desert Rose)": "Adenium obesum",
+    "Canna Lily": "Canna indica", "Moss Rose (Portulaca)": "Portulaca grandiflora",
+    "Bird of Paradise": "Strelitzia reginae", "Cycas Palm (Sago Palm)": "Cycas revoluta",
+    "Chrysanthemum": "Chrysanthemum morifolium", "Petunia": "Petunia",
+    "Sunflower": "Helianthus annuus", "Lavender": "Lavandula angustifolia",
+    "Hydrangea": "Hydrangea macrophylla", "Peperomia": "Peperomia",
+    "Peperomia Green Creeper Plant": "Peperomia", "Dracaena Marginata": "Dracaena marginata",
+    "Dieffenbachia (Dumb Cane)": "Dieffenbachia", "Schefflera (Umbrella Plant)": "Schefflera arboricola",
+    "Ponytail Palm": "Beaucarnea recurvata", "String of Pearls": "Curio rowleyanus",
+    "Echeveria Succulent": "Echeveria", "Haworthia Zebra Plant": "Haworthiopsis attenuata",
+    "Kalanchoe": "Kalanchoe blossfeldiana", "Christmas Cactus": "Schlumbergera",
+    "English Ivy": "Hedera helix", "Wandering Jew (Tradescantia)": "Tradescantia zebrina",
+    "Coleus": "Coleus scutellarioides", "Begonia Rex": "Begonia rex",
+    "Maranta (Prayer Plant)": "Maranta leuconeura", "Alocasia (Elephant Ear)": "Alocasia macrorrhizos",
+    "Bamboo Palm": "Chamaedorea seifrizii", "Kentia Palm": "Howea forsteriana",
+    "Norfolk Island Pine": "Araucaria heterophylla", "Asparagus Fern": "Asparagus setaceus",
+    "Bird's Nest Fern": "Asplenium nidus", "Staghorn Fern": "Platycerium bifurcatum",
+    "Air Plant (Tillandsia)": "Tillandsia", "Bromeliad": "Guzmania",
+    "Orchid (Phalaenopsis)": "Phalaenopsis", "Hoya (Wax Plant)": "Hoya carnosa",
+    "Pilea (Chinese Money Plant)": "Pilea peperomioides", "Oxalis (Purple Shamrock)": "Oxalis triangularis",
+    "Ficus Benjamina": "Ficus benjamina",
+}
