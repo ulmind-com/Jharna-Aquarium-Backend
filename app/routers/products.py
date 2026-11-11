@@ -1,6 +1,7 @@
 import asyncio
 from datetime import datetime, timezone
 
+from bson import ObjectId
 from fastapi import APIRouter, Depends, HTTPException, Query
 
 from app.db.mongodb import get_db
@@ -65,9 +66,19 @@ def _decorate(doc: dict) -> dict:
     return d
 
 
+async def _resolve_category_id(db, category_id_or_slug: str) -> str:
+    if ObjectId.is_valid(category_id_or_slug):
+        return category_id_or_slug
+    doc = await db.categories.find_one(
+        {"slug": category_id_or_slug.strip().lower()}, {"_id": 1}
+    )
+    return str(doc["_id"]) if doc else category_id_or_slug
+
+
 async def _category_ids_with_children(db, category_id: str) -> list[str]:
-    ids = [category_id]
-    children = await db.categories.find({"parent_id": category_id}).to_list(length=200)
+    resolved_id = await _resolve_category_id(db, category_id)
+    ids = [resolved_id]
+    children = await db.categories.find({"parent_id": resolved_id}).to_list(length=200)
     ids += [str(c["_id"]) for c in children]
     return ids
 
@@ -109,7 +120,7 @@ async def list_products(
     min_price: float | None = None,
     max_price: float | None = None,
     sort_by: str | None = None,
-    limit: int = Query(default=20, le=200),
+    limit: int = Query(default=20, le=500),
     skip: int = 0,
     admin: bool = False,
 ):

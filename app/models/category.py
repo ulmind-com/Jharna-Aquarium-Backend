@@ -8,6 +8,7 @@ class CategoryCreate(BaseModel):
     blurb: str | None = None           # short line shown in nav panel / category cards
     description: str | None = None     # longer SEO description
     image: str | None = None
+    hero_image: str | None = None      # optional wide banner shown on /category/<slug>
     icon: str | None = None            # emoji or icon class (🌿, 🪴, 🌻)
     image_scale: float | None = None   # home pill image size multiplier (1.0 = default)
     order: int = 0
@@ -20,6 +21,7 @@ class CategoryUpdate(BaseModel):
     blurb: str | None = None
     description: str | None = None
     image: str | None = None
+    hero_image: str | None = None
     icon: str | None = None
     image_scale: float | None = None
     order: int | None = None
