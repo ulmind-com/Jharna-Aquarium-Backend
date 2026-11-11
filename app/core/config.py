@@ -17,6 +17,20 @@ class Settings(BaseSettings):
 
     CORS_ORIGINS: str = "*"
 
+    # WebAuthn — fingerprint / Face ID / passkey sign-in for the super-admin
+    # panel only. The rp_id is derived per request from the Origin host, so one
+    # backend serves production and localhost without redeploys; WEBAUTHN_ORIGINS
+    # is the comma-separated allowlist of exact origins the admin panel is served
+    # from. Unlike CORS_ORIGINS, this cannot be a wildcard — a passkey is bound
+    # to a concrete rp_id, so each real origin must be listed. Set it in .env for
+    # the deployed admin domain.
+    WEBAUTHN_RP_NAME: str = "Jharna Aquarium & Nursery Admin"
+    WEBAUTHN_ORIGINS: str = "http://localhost:5173,http://localhost:4173,http://localhost:3000"
+
+    @property
+    def webauthn_origin_list(self) -> list[str]:
+        return [o.strip() for o in self.WEBAUTHN_ORIGINS.split(",") if o.strip()]
+
     RAZORPAY_KEY_ID: str = ""
     RAZORPAY_KEY_SECRET: str = ""
     # Set once a webhook is created in the Razorpay Dashboard (payment.captured

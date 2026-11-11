@@ -14,3 +14,4 @@ google-auth>=2.35  # verify Firebase web ID tokens without a service account
 firebase-admin==7.5.0  # push notifications (FCM); grpcio now ships a cp314 wheel
 xhtml2pdf>=0.2.16  # server-side HTML→PDF for invoice downloads
 openpyxl>=3.1.5  # server-side .xlsx generation for order exports
+webauthn>=2.0.0  # super-admin fingerprint / passkey sign-in (WebAuthn)

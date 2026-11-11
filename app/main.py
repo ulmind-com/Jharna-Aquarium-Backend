@@ -7,6 +7,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from app.core.config import settings
 from app.db.mongodb import close_mongo_connection, connect_to_mongo, get_db
 from app.routers import (
+    admin_webauthn,
     admins,
     analytics,
     auth,
@@ -234,6 +235,7 @@ async def log_requests(request: Request, call_next):
     return response
 
 app.include_router(auth.router)
+app.include_router(admin_webauthn.router)
 app.include_router(admins.router)
 app.include_router(analytics.router)
 app.include_router(brands.router)
