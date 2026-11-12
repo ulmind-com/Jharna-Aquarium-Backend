@@ -83,6 +83,7 @@ class ProductCreate(BaseModel):
     rating: float = Field(default=0, ge=0, le=5)
     review_count: int = 0
     sold_count: int = 0
+    wishlist_count: int = 0
 
     is_active: bool = True
     is_featured: bool = False
@@ -125,6 +126,7 @@ class ProductUpdate(BaseModel):
     rating: float | None = None
     review_count: int | None = None
     sold_count: int | None = None
+    wishlist_count: int | None = None
     is_active: bool | None = None
     is_featured: bool | None = None
     is_bestseller: bool | None = None

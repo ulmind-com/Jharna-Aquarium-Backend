@@ -47,10 +47,16 @@ SECTION_TYPES: list[dict] = [
     {
         "type": "hero",
         "label": "Hero Slider",
-        "description": "Full-width slider at the very top. Slides are managed in Marquee Banner / Banners.",
-        "source": "banners",
+        "description": "Full-width auto-sliding banners at the very top of the home page. Manage slides, text and buttons here.",
         "fields": [],
-        "item_fields": [],
+        "item_fields": [
+            _f("image", "Banner photo (widescreen)", "image"),
+            _f("badge", "Eyebrow badge"),
+            _f("title", "Headline"),
+            _f("subtitle", "Sub-heading", "textarea"),
+            _f("cta_label", "Button text"),
+            _f("cta_url", "Button link", "link"),
+        ],
     },
     {
         "type": "category_strip",
@@ -90,9 +96,16 @@ SECTION_TYPES: list[dict] = [
     {
         "type": "spotlight",
         "label": "In the Spotlight",
-        "description": "Two square promo artworks side by side.",
+        "description": "Compact landscape promo banners rendered side by side.",
         "fields": [_f("title", "Heading"), _f("subtitle", "Sub-heading")],
-        "item_fields": [_f("image", "Artwork", "image"), _f("link", "Links to", "link"), _f("title", "Alt text")],
+        "item_fields": [
+            _f("image", "Background photo", "image"),
+            _f("badge", "Eyebrow badge"),
+            _f("title", "Headline"),
+            _f("description", "Short copy", "textarea"),
+            _f("cta_label", "Button text"),
+            _f("link", "Links to", "link"),
+        ],
     },
     {
         "type": "low_effort",
@@ -172,10 +185,9 @@ SECTION_TYPES: list[dict] = [
     {
         "type": "shop_by_space",
         "label": "Transform Your Home",
-        "description": "Room tiles. Uses the 'Shop by Space' category tree when it exists, otherwise these tiles.",
-        "source": "categories",
+        "description": "Six category showcase tiles across Plants, Fish, Birds, Pet Food, Tank Gear and Garden Essentials.",
         "fields": [_f("title", "Heading")],
-        "item_fields": [_f("image", "Photo", "image"), _f("title", "Room name"), _f("link", "Links to", "link")],
+        "item_fields": [_f("image", "Photo", "image"), _f("title", "Category label"), _f("link", "Links to", "link")],
     },
     {
         "type": "trust_bar",
@@ -349,7 +361,43 @@ def _cmp(label: str, local: tuple, brand: tuple, others: tuple) -> dict:
 
 
 HOME_DEFAULTS: list[dict] = [
-    {"type": "hero"},
+    {
+        "type": "hero",
+        "items": [
+            {
+                "image": "/images/hero-aquarium.png",
+                "badge": "Aquarium & Exotic Fish",
+                "title": "Vivid Aquariums & Exotic Fish",
+                "subtitle": "Healthy freshwater fish, planted tanks, filters, heaters & aquascape decor.",
+                "cta_label": "Explore Aquarium",
+                "cta_url": "/search?q=aquarium",
+            },
+            {
+                "image": "/images/hero-plants.png",
+                "badge": "Live Botanical Nursery",
+                "title": "Lush Plants for Every Corner",
+                "subtitle": "Hand-nurtured indoor foliage, flowering perennials, palms & air-purifying greens.",
+                "cta_label": "Shop Live Plants",
+                "cta_url": "/plants",
+            },
+            {
+                "image": "/images/hero-birds-pets.png",
+                "badge": "Birds & Pet Nutrition",
+                "title": "Happy Birds & Wholesome Pet Food",
+                "subtitle": "Healthy companion birds, nutritious seed blends, fish pellets & daily care treats.",
+                "cta_label": "Shop Pet & Bird Care",
+                "cta_url": "/search?q=bird",
+            },
+            {
+                "image": "/images/hero-garden-supplies.png",
+                "badge": "Pots, Mati & Coco Peat",
+                "title": "Everything Your Garden Needs",
+                "subtitle": "Designer pots, enriched garden soil (mati), organic coco peat & nursery tools.",
+                "cta_label": "Shop Garden Supplies",
+                "cta_url": "/category/pots",
+            },
+        ],
+    },
     {"type": "category_strip", "title": "Our Categories", "limit": 9},
     {
         "type": "trust_strip",
@@ -387,8 +435,22 @@ HOME_DEFAULTS: list[dict] = [
         "title": "In the Spotlight",
         "subtitle": "One for the Tadka, One for the Drama",
         "items": [
-            {"image": "/images/spotlight-1.png", "link": "/search?q=Peace%20Lily", "title": "Starring Peace Lily"},
-            {"image": "/images/spotlight-2.png", "link": "/search?q=Kadi%20Patta", "title": "Kadi Patta Plant New Launch"},
+            {
+                "image": "/images/spotlight-1.png",
+                "badge": "Bestseller Spotlight",
+                "title": "Starring Peace Lily",
+                "description": "Air-purifying white blooms in a warm artisan ceramic planter.",
+                "cta_label": "Shop Peace Lily",
+                "link": "/search?q=Peace%20Lily",
+            },
+            {
+                "image": "/images/spotlight-2.png",
+                "badge": "New Arrival",
+                "title": "Fresh Kadi Patta",
+                "description": "Aromatic kitchen-garden curry leaf plant thriving on sunny ledges.",
+                "cta_label": "Explore Herbs",
+                "link": "/search?q=Kadi%20Patta",
+            },
         ],
     },
     {
@@ -456,10 +518,12 @@ HOME_DEFAULTS: list[dict] = [
         "type": "shop_by_space",
         "title": "Transform Your Home.",
         "items": [
-            {"image": "/places/living-room.jpg", "title": "Living Room", "link": "/search?q=living%20room"},
-            {"image": "/places/bedroom.jpg", "title": "Bedroom", "link": "/search?q=bedroom"},
-            {"image": "/places/balcony.jpg", "title": "Balcony", "link": "/search?q=balcony"},
-            {"image": "/places/office.jpg", "title": "Office", "link": "/search?q=office"},
+            {"image": "/images/space-plants.png", "title": "Live Plants", "link": "/plants"},
+            {"image": "/images/space-fish.png", "title": "Ornamental Fish", "link": "/search?q=fish"},
+            {"image": "/images/space-aquarium-gear.png", "title": "Aquarium Essentials", "link": "/search?q=aquarium"},
+            {"image": "/images/space-birds.png", "title": "Exotic Birds", "link": "/search?q=bird"},
+            {"image": "/images/space-pet-food.png", "title": "Pet & Fish Food", "link": "/search?q=food"},
+            {"image": "/images/space-pots-soil.png", "title": "Pots, Soil & Coco Peat", "link": "/category/pots"},
         ],
     },
     {"type": "trust_bar"},
@@ -508,8 +572,6 @@ HOME_DEFAULTS: list[dict] = [
         "cta_label": "Shop Now",
         "cta_link": "/category/seeds",
     },
-    {"type": "store_locator", "title": "Find Your Nearest Store.",
-     "subtitle": "Step inside for exotic plants, rare planters, and an experience you can't find online."},
     {"type": "garden_services"},
     {"type": "gifting"},
     {"type": "press"},

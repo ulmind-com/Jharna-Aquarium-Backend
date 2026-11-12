@@ -11,9 +11,12 @@ router = APIRouter(prefix="/banners", tags=["banners"])
 
 
 class BannerIn(BaseModel):
-    image: str                    # banner image url (recommended 1000x420, ~2.4:1)
+    image: str                    # banner image url (recommended 16:9 widescreen)
+    badge: str = ""
     title: str = ""
     subtitle: str = ""
+    cta_label: str = "Shop Now"
+    cta_url: str = "/plants"
     code: str = ""                # optional coupon code to surface on the banner
     active: bool = True
     order: int = 0
