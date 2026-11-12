@@ -121,6 +121,18 @@ SECTION_TYPES: list[dict] = [
         "item_fields": [],
     },
     {
+        "type": "healthy_aquarium",
+        "label": "About a Healthy Aquarium",
+        "description": "Teal explainer band with an aquarium showcase photo and four setup steps.",
+        "fields": [
+            _f("title", "Heading"),
+            _f("description", "Body copy", "textarea"),
+            _f("image", "Aquarium showcase photo", "image"),
+            _f("subtitle", "Steps heading"),
+        ],
+        "item_fields": [_f("image", "Step image", "image"), _f("title", "Step caption")],
+    },
+    {
         "type": "bhidu",
         "label": "Bhidu Approved Rail",
         "description": "The sunburst rail with the cut-out person and a product carousel.",
@@ -460,6 +472,19 @@ HOME_DEFAULTS: list[dict] = [
         "cta_label": "View all",
         "cta_link": "/plants",
         "limit": 10,
+    },
+    {
+        "type": "healthy_aquarium",
+        "title": "About a Healthy Aquarium",
+        "description": "Create a balanced aquatic environment where plants thrive, fish stay healthy, and water remains clean.",
+        "image": "/images/healthy-aquarium-main.jpg",
+        "subtitle": "How it works",
+        "items": [
+            {"image": "/images/healthy-aquarium-step-1.jpg", "title": "Set Up the Aquarium"},
+            {"image": "/images/healthy-aquarium-step-2.jpg", "title": "Fill with Clean Water"},
+            {"image": "/images/healthy-aquarium-step-3.jpg", "title": "Filter & Balance the Water"},
+            {"image": "/images/healthy-aquarium-step-4.jpg", "title": "Add Fish & Enjoy"},
+        ],
     },
     {
         "type": "bhidu",

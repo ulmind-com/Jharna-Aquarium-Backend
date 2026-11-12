@@ -1419,7 +1419,36 @@ async def main():
         }},
     )
 
-    print("Updated hero, spotlight, shop_by_space, grow_banner, and bestsellers sections.")
+    from app.routers.page_sections import HOME_DEFAULTS, _blank
+    ha_default = next((s for s in HOME_DEFAULTS if s.get("type") == "healthy_aquarium"), None)
+    if ha_default:
+        existing_ha = await db.page_sections.find_one({"page": "home", "type": "healthy_aquarium"})
+        low_effort_sec = await db.page_sections.find_one({"page": "home", "type": "low_effort"})
+        target_order = int(low_effort_sec.get("order", 6)) + 1 if low_effort_sec else 7
+        if not existing_ha:
+            await db.page_sections.update_many(
+                {"page": "home", "order": {"$gte": target_order}},
+                {"$inc": {"order": 1}, "$set": {"updated_at": now}},
+            )
+            ha_doc = _blank("healthy_aquarium")
+            ha_doc.update(ha_default)
+            ha_doc.update({"page": "home", "order": target_order, "active": True, "created_at": now, "updated_at": now})
+            await db.page_sections.insert_one(ha_doc)
+        else:
+            await db.page_sections.update_one(
+                {"_id": existing_ha["_id"]},
+                {"$set": {
+                    "title": ha_default["title"],
+                    "description": ha_default["description"],
+                    "image": ha_default["image"],
+                    "subtitle": ha_default["subtitle"],
+                    "items": ha_default["items"],
+                    "active": True,
+                    "updated_at": now,
+                }},
+            )
+
+    print("Updated hero, spotlight, shop_by_space, grow_banner, bestsellers, and healthy_aquarium sections.")
     await close_mongo_connection()
 
 
