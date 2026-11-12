@@ -129,7 +129,9 @@ async def search_products(
         query["$or"] = [
             {"title": {"$regex": re.escape(q), "$options": "i"}},
             {"brand": {"$regex": re.escape(q), "$options": "i"}},
+            {"short_description": {"$regex": re.escape(q), "$options": "i"}},
             {"description": {"$regex": re.escape(q), "$options": "i"}},
+            {"tags": {"$regex": re.escape(q), "$options": "i"}},
         ]
 
     if category_id:
@@ -184,7 +186,9 @@ async def search_products(
         facet_query["$or"] = [
             {"title": {"$regex": re.escape(q), "$options": "i"}},
             {"brand": {"$regex": re.escape(q), "$options": "i"}},
+            {"short_description": {"$regex": re.escape(q), "$options": "i"}},
             {"description": {"$regex": re.escape(q), "$options": "i"}},
+            {"tags": {"$regex": re.escape(q), "$options": "i"}},
         ]
     if category_id:
         facet_query["category_id"] = query.get("category_id", {"$in": [category_id]})
@@ -212,6 +216,7 @@ async def search_products(
 
     return {
         "products": products,
+        "items": products,
         "total": total,
         "facets": facets,
     }
@@ -236,7 +241,9 @@ def _build_facets(items: list[dict], cat_name_map: dict) -> dict:
 
         # Sizes
         for s in (p.get("sizes") or []):
-            size_counts[s] = size_counts.get(s, 0) + 1
+            sname = s.get("name", "") if isinstance(s, dict) else str(s)
+            if sname:
+                size_counts[sname] = size_counts.get(sname, 0) + 1
 
         # Colors
         for c in (p.get("colors") or []):
