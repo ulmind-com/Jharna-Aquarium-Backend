@@ -26,7 +26,14 @@ def _ensure_app():
         from firebase_admin import credentials
 
         raw = settings.FIREBASE_CREDENTIALS.strip()
-        cred = credentials.Certificate(json.loads(raw) if raw.startswith("{") else raw)
+        if raw.startswith("{"):
+            try:
+                cert_data = json.loads(raw)
+            except Exception:
+                cert_data = json.loads(raw, strict=False)
+            cred = credentials.Certificate(cert_data)
+        else:
+            cred = credentials.Certificate(raw)
         _app = firebase_admin.initialize_app(cred)
         _ready = True
     except Exception as e:  # pragma: no cover
