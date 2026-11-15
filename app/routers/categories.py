@@ -60,6 +60,9 @@ async def category_tree(include_counts: bool = Query(default=False)):
     prod_sets = await _product_sets_by_category(db) if include_counts else {}
 
     top = [c for c in items if not c.get("parent_id")]
+    known_parent_ids = {p["id"] for p in top}
+    orphans = [c for c in items if c.get("parent_id") and c.get("parent_id") not in known_parent_ids]
+
     for parent in top:
         children = [c for c in items if c.get("parent_id") == parent["id"]]
         if include_counts:
@@ -72,6 +75,16 @@ async def category_tree(include_counts: bool = Query(default=False)):
             parent["direct_product_count"] = len(prod_sets.get(parent["id"], ()))
             parent["product_count"] = len(combined)
         parent["children"] = children
+
+    if orphans:
+        top.append({
+            "id": "other",
+            "name": "Other Categories",
+            "slug": "other",
+            "parent_id": None,
+            "order": 9999,
+            "children": orphans,
+        })
     return top
 
 
